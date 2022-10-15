@@ -30,7 +30,6 @@ export default async function AssetStream(server = "wss://xrplcluster.com/")
 		const request =
 		{
 			command: "book_offers",
-			// taker: "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59",
 			taker_gets:
 			{
 				currency: "XRP"
@@ -114,15 +113,7 @@ export default async function AssetStream(server = "wss://xrplcluster.com/")
 			const prepared = await client.autofill(request);
 			const max_ledger = prepared.LastLedgerSequence;
 
-			// console.log("Prepared transaction instructions:", prepared);
-			// console.log("Transaction cost:", dropsToXrp(prepared.Fee), "XRP");
-			// console.log("Transaction expires after ledger:", max_ledger);
-
 			const signed = wallet.sign(prepared);
-
-
-			// console.log("Identifying hash:", signed.hash);
-			// console.log("Signed blob:", signed.tx_blob);
 
 			return client.submitAndWait(signed.tx_blob)
 				.then(function (tx)
@@ -197,23 +188,12 @@ export default async function AssetStream(server = "wss://xrplcluster.com/")
 				}
 				else if (is.string(TakerPays))
 				{
-					const { currency, issuer, value } = TakerGets;
-					const xrp = parseFloat(TakerPays) / 1000000;
-					const token = parseFloat(value);
-					const price = token / xrp;
-
-					//console.log(`Selling ${token} ${currency} (${issuer}) for ${xrp} @ ${price}`);
-
-					// const tokenIssuers: Set<string> = tokens.has(currency)
-					// 	? tokens.get(currency)
-					// 	: new Set();
-
-					// tokenIssuers.add(issuer);
-					// tokens.set(currency, tokenIssuers);
+					//	Sell orders can be collected here. We are more concerned with buy orders.
 				}
 				else
 				{
-					console.log("Token for token");
+					//	These are offers for issued token/issued token trades.
+					// console.log("Token for token");
 				}
 
 
@@ -221,7 +201,6 @@ export default async function AssetStream(server = "wss://xrplcluster.com/")
 
 
 	});
-
 
 	return { Wallet, tokens, Price };
 }
