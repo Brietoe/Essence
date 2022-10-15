@@ -1,0 +1,17 @@
+{
+	"name": "@cc-tech/essence",
+	"version": "1.0.3",
+	"description": "Essence Liquidity Token",
+	"type": "module",
+	"scripts": {
+		"start": "node ./Release/Essence.mjs"
+	},
+	"author": "Brietoe <Brietoe@ComputerCowboy.tech>",
+	"license": "AGPL-3.0-or-later",
+	"devDependencies": {
+		"@types/node": "^16.11.35"
+	},
+	"dependencies": {
+		"xrpl": "^2.5.0"
+	}
+}
