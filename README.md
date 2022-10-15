@@ -14,3 +14,10 @@ This implementation also sends excess XRP made from selling off ESN to the activ
 A simplified version of the trading algorithm exists on my Github project "CryptoCowboy"
 The CryptoCowboy implementation is fully funtioning and actively trades on the live mainet.
 I will post the full implementation code for "CryptoCowboy" to Github after some cleaning up.
+
+TODO:
+Separate concerns and provide each functionality as a separate unit.
+Set up all functionalities to operate independently.
+Link Hot wallet to trading algorithm.
+Finish Akira protocol (allocating XRP to trade with vetted assets)
+Automate all token issuance and buyback.
