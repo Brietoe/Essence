@@ -8,7 +8,9 @@ Price > 0.000010 XRP and Buy orders for XRP exist.
 
 It prints the token, issuer, price and transaction fee.
 
-A simplified version of the trading algorithm exists on my Github project "CryptoCowboy"
-The CryptoCowboy implementation is fully funtioning and actively trades on the live mainet; I might post all that code later and will update here if I do.
-
 This implementation also sends excess XRP made from selling off ESN to the actively trading hot wallet.
+
+
+A simplified version of the trading algorithm exists on my Github project "CryptoCowboy"
+The CryptoCowboy implementation is fully funtioning and actively trades on the live mainet.
+I might post the full implementation code for "CryptoCowboy" later - I will update here if I do.
