@@ -13,4 +13,4 @@ This implementation also sends excess XRP made from selling off ESN to the activ
 
 A simplified version of the trading algorithm exists on my Github project "CryptoCowboy"
 The CryptoCowboy implementation is fully funtioning and actively trades on the live mainet.
-I might post the full implementation code for "CryptoCowboy" later - I will update here if I do.
+I will post the full implementation code for "CryptoCowboy" to Github after some cleaning up.
